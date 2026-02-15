@@ -22,19 +22,24 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: lightgray;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
 }
 
 .split-left {
   display: flex;
   align-items: center;
   gap: 16px;
-  background-color: rgb(194, 79, 175);
   padding: 16px;
 }
 
 .split-left .logo {
-  width: 80px;
+  width: 120px;
   height: auto;
 }
 
@@ -46,11 +51,12 @@ body {
 }
 
 .split-right {
-  background-color: rgb(79, 194, 175);
   padding: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .links ul {
@@ -67,8 +73,27 @@ body {
   font-weight: bold;
 }
 
+.links a:hover {
+  color: #1FB6A6;
+}
+
+.login-button {
+  background: transparent;
+  color: #1FB6A6;
+  border: 0.2px solid #1FB6A6;
+  padding: 15px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.login-button:hover {
+  background-color: #1FB6A6;
+  color: white;
+}
+
 .body {
-  background-color: lightgreen;
+  background-color: #FFF3E8;
   flex: 1;
   padding: 40px 20px;
   display: flex;
@@ -76,8 +101,11 @@ body {
   gap: 16px;
 }
 
+
+
+
 .footer {
-  background-color: bisque;
+  background-color: #5A3E2B;
   text-align: center;
   padding: 20px;
 }
