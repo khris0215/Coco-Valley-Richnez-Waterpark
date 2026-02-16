@@ -98,7 +98,7 @@ a {
 }
 
 .login-button {
-  padding: 0.5rem 1.2rem;
+  padding: 1rem 1.5rem;
   background-color: #1e90ff;
   color: #fff;
   border: none;
@@ -110,6 +110,10 @@ a {
 
 .login-button:hover {
   background-color: #63a7eb;
+}
+
+.login-text {
+  font-size: 0.85rem;
 }
 
 .hero-video {
@@ -207,84 +211,99 @@ a {
   background: linear-gradient(180deg, rgba(10, 28, 46, 0.92) 0%, rgba(10, 28, 46, 1) 35%);
 }
 
-.body > section {
+
+.body > section:not(.top-body) {
   max-width: 720px;
   margin: 0 auto 4rem;
 }
 
 .top-body {
-  max-width: min(96vw, 1600px);
-  width: 100%;
+  width: min(90vw, 1500px);
   margin: 0 auto 5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 2rem;
 }
 
 .lower-hero {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
+  max-width: 860px;
 }
 
 .lower-hero h1 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
 }
 
-.lower-hero p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #d7e1ed;
-}
 
 .cottage-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 3rem;
   width: 100%;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 3rem;
 }
 
 .cottage-card {
-  flex: 1 1 calc(50% - 1.5rem);
-  max-width: 760px;
+  position: relative;
   background: rgba(6, 18, 31, 0.55);
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 18px 40px rgba(3, 10, 18, 0.32);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 18px 42px rgba(3, 10, 18, 0.34);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  min-height: 620px;
 }
 
 .cottage-card:hover,
 .cottage-card:focus-within {
   transform: translateY(-8px);
-  box-shadow: 0 24px 48px rgba(3, 10, 18, 0.46);
+  box-shadow: 0 24px 56px rgba(3, 10, 18, 0.46);
 }
 
 .cottage-card__image {
   width: 100%;
-  height: 360px;
+  height: clamp(360px, 42vh, 480px);
   object-fit: cover;
 }
 
 .cottage-card__body {
-  padding: 2rem 2.25rem 2.4rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 2.1rem 1.8rem;
+  background: linear-gradient(180deg, rgba(4, 15, 25, 0.1) 0%, rgba(4, 15, 25, 0.82) 55%, rgba(4, 15, 25, 0.95) 100%);
   text-align: left;
+  transform: translateY(calc(100% - 72px));
+  transition: transform 0.35s ease;
 }
 
 .cottage-card__title {
-  margin: 0 0 0.85rem;
-  font-size: 1.75rem;
-  letter-spacing: 0.05em;
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .cottage-card__copy {
-  margin: 0;
+  margin: 1.1rem 0 0;
   line-height: 1.7;
   color: #d7e1ed;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, max-height 0.3s ease;
+}
+
+.cottage-card:hover .cottage-card__body,
+.cottage-card:focus-within .cottage-card__body {
+  transform: translateY(0);
+}
+
+.cottage-card:hover .cottage-card__copy,
+.cottage-card:focus-within .cottage-card__copy {
+  opacity: 1;
+  max-height: 240px;
 }
 
 .body h2 {
@@ -335,16 +354,16 @@ a {
   }
 
   .lower-hero {
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   .cottage-gallery {
-    gap: 1.5rem;
+    gap: 1.75rem;
+    grid-template-columns: 1fr;
   }
 
   .cottage-card {
-    flex: 1 1 100%;
-    max-width: 100%;
+    min-height: 520px;
   }
 
   .cottage-card__image {
@@ -355,4 +374,5 @@ a {
     padding: 1.6rem 1.75rem 2rem;
   }
 }
+
 
