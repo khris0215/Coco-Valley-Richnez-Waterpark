@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a1c2e;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+}
+
+.home-button {
+  background-color: #4d7196;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
