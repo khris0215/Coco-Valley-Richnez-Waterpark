@@ -4,11 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coco Valley Richnez Water Park</title>
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-  <h1>
-    Login Page
-  </h1>
-  <a href="../index.html"><button>Back to Home</button></a>
+  <div class="container">
+    <div class="login-form">
+      <h2 class="login-title">Login to Your Account</h2>
+      <form action="../index.html" method="GET">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input class="username-input"type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="password-input" type="password" id="password" name="password" required>
+        </div>
+        <a href="../index.html">
+          <button type="submit" class="login-button">Login</button>
+        </a>
+    </div>
+  </div>
 </body>
 </html>
