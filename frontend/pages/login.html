@@ -3,26 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coco Valley Richnez Water Park</title>
+  <title>Login | Coco Valley Richnez Water Park</title>
   <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-  <div class="container">
-    <div class="login-form">
-      <h2 class="login-title">Login to Your Account</h2>
-      <form action="../index.html" method="GET">
+  <main class="auth-page">
+    <section class="auth-card" aria-labelledby="loginTitle">
+      <div class="auth-header">
+        <p class="eyebrow">Welcome back</p>
+        <h1 id="loginTitle" class="login-title">Sign in to your account</h1>
+        <p class="subtitle">Access bookings, reservations, and your resort dashboard.</p>
+      </div>
+
+      <form class="login-form" action="#" method="post">
         <div class="form-group">
-          <label for="username">Username</label>
-          <input class="username-input"type="text" id="username" name="username" required>
+          <label for="username">Username or Email</label>
+          <input class="username-input" type="text" id="username" name="username" autocomplete="username" required>
         </div>
+
         <div class="form-group">
           <label for="password">Password</label>
-          <input class="password-input" type="password" id="password" name="password" required>
+          <input class="password-input" type="password" id="password" name="password" autocomplete="current-password" required>
         </div>
-        <a href="../index.html">
-          <button type="submit" class="login-button">Login</button>
-        </a>
-    </div>
-  </div>
+
+        <button type="submit" class="login-button">Login</button>
+      </form>
+
+      <div class="social-login" aria-label="Social sign-in options">
+        <p class="social-divider"><span>or continue with</span></p>
+        <div class="social-actions">
+          <button type="button" class="social-button social-button--google" aria-label="Continue with Google">
+            Continue with Google
+          </button>
+          <button type="button" class="social-button social-button--apple" aria-label="Continue with Apple">
+            Continue with Apple
+          </button>
+        </div>
+      </div>
+
+      <nav class="auth-links" aria-label="Account links">
+        <a href="signup.html" class="text-link">Create an account</a>
+        <a href="forgot-password.html" class="text-link">Forgot password?</a>
+        <a href="../index.html" class="text-link">Back to home</a>
+      </nav>
+    </section>
+  </main>
 </body>
 </html>
